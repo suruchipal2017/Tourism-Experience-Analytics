@@ -126,10 +126,10 @@ st.markdown("""
 # PATHS
 # ============================================================
 
-BASE_PATH = "/content"
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 CLASSIFICATION_MODEL_PATH = os.path.join(
-    BASE_PATH, "tourism_random_forest_model.joblib"
+    BASE_PATH, "tourism_random_forest_200_maxcompressed_v2.joblib"
 )
 
 CLASSIFICATION_METADATA_PATH = os.path.join(
@@ -140,14 +140,13 @@ REGRESSION_MODEL_PATH = os.path.join(
     BASE_PATH, "tourism_gradient_boosting_regression_model.joblib"
 )
 
-TRANSACTION_PATH = os.path.join(BASE_PATH, "Transaction.xlsx")
+TRANSACTION_PATH = os.path.join(BASE_PATH, "Transaction (1).xlsx")
 ITEM_PATH = os.path.join(BASE_PATH, "Item.xlsx")
-MODE_PATH = os.path.join(BASE_PATH, "Mode.xlsx")
+MODE_PATH = os.path.join(BASE_PATH, "Mode (1).xlsx")
 TYPE_PATH = os.path.join(BASE_PATH, "Type.xlsx")
 CITY_PATH = os.path.join(BASE_PATH, "City.xlsx")
 COUNTRY_PATH = os.path.join(BASE_PATH, "Country.xlsx")
 REGION_PATH = os.path.join(BASE_PATH, "Region.xlsx")
-
 
 # ============================================================
 # LOAD MODELS AND DATA
